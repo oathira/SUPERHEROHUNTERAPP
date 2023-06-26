@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superheros</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <h1>MARVEL API</h1>
+         <a id="fav-link" href="favourites.html"><span>FAVOURITES</span></a>
+      </div>     
+      <div class="search-container">
+         <input type="text" class="search-tab" id ="search-box" placeholder="Search here for superhero's...." onkeyup="fetchChars()"/>
+         <div class="search-list" id="search-list"></div>  
+      </div>
+   </div>
+</body>
+<script src="script.js"></script>
+</html>

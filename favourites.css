@@ -1,0 +1,125 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+}
+#header-container{
+    background-color:black;
+} 
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:10px;
+}
+#heading{
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    color:brown;
+    font-size: 40px;
+}
+#heading .empty-message{
+    font-weight: lighter;
+    color: white;
+    font-size: small;
+}
+#home{
+    text-decoration: none;
+    color:brown;
+    font-size: 25px;
+    font-weight: bold;
+}
+#bottom p{
+    color:white;
+}
+#fav-list{
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+#fav-list-ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+#fav-list-li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height:65vh;
+    width:30vh;
+    margin: 50px;
+    list-style-type: none;
+ }
+#super-hero{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+    margin:20px
+}
+#super-hero-data{
+    display: block;
+    width: min-content;
+}
+
+#top{
+    height: 100px;
+    width: 100px;
+}
+#top img{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+img:hover{
+    transform:rotate(10deg);
+}
+/*Fav list names and */
+#bottom{
+    margin-top: 10px;
+    display: block;
+    text-align: -webkit-center;
+}
+#super-hero-name{
+    font-size: smaller;
+}
+#sper-hero-name:hover{
+    color:red;
+}
+button{
+    height: 30px;
+    margin: 15px;
+    width: 100px;
+    background:brown;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    height: 30px;
+    margin: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    border: 1x solid rgb(87, 66, 66);
+    transition:0.2s ease-in;
+    color:black;
+    border:1px solid black;
+}
