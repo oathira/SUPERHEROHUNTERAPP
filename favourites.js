@@ -1,6 +1,7 @@
 let favList = document.getElementById('fav-list-ul');    
 let heading = document.getElementById('heading');
 
+// Favourite charcter list from localstorage
 let favouriteListIds = getFavouriteFromLocalStorage();
 
 function getFavouriteFromLocalStorage(){
@@ -14,6 +15,7 @@ function getFavouriteFromLocalStorage(){
   return favourites;
 }
 
+// if   no favourite charcters it will show message as add favourites
 if(favouriteListIds.length == 0){
   let EmptyMessage = document.createElement('div');
   EmptyMessage.className = 'empty-message';
@@ -23,6 +25,7 @@ if(favouriteListIds.length == 0){
 
 fetchFavourites();
 
+// function which fetch and display favourite characters
 function fetchFavourites() {
   for(let i = 0 ; i < favouriteListIds.length ; i++)
     {
@@ -68,6 +71,8 @@ function fetchFavourites() {
   }
 
 }
+
+// function to remove favourite charcter from favouritelist and update localstorage 
 async function handleremoveFavourite(e){ 
     let removeItemId = e.target.id;
     let favouritesId = getFavouriteFromLocalStorage();

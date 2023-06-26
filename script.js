@@ -5,6 +5,7 @@
 const searchBox = document.getElementById('search-box');
 const searchList = document.getElementById('search-list');
 
+//fetch characters from API
 async function fetchData(data){
     const URL =`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${data}&ts=1687172870181&apikey=e79b44c4afe51716826ec1a692abe2ce&hash=2e58ac357ac2eb8962dc12716c15aa43`;   
     const response = await fetch(`${URL}`);
@@ -12,7 +13,7 @@ async function fetchData(data){
     handleDisplayList(output.data.results);
 
 }
-
+ 
  function fetchChars(){
     let char = searchBox.value.trim();
     console.log(char);
@@ -24,13 +25,14 @@ async function fetchData(data){
     searchList.classList.add('display-list-none');
  }
 }
-
+//function to display the searching character list 
 function handleDisplayList(items){
-    console.log(items)
+   //  console.log(items)
     searchList.innerHTML="";
     for(let i=0;i<items.length;i++){
        const listItem = document.createElement("div");
        listItem.dataset.id = items[i].id;
+      //  create class attribte with the name search-list-item
        listItem.className="search-list-item"
        listItem.innerHTML =`
           <div class="item-left" >
@@ -66,16 +68,18 @@ function handleFavourite(charDetails){
       if(!favourites.includes(id)){
         favourites.push(id);
        }
+       //Set favourite charcter ids in local storage
       localStorage.setItem('favouriteHeros',JSON.stringify(favourites));
  }
 
+//function to get favourite charcter ids from localstorage
 function getFavouriteFromLocalStorage(){
       let favourites;
       if(localStorage.getItem('favouriteHeros')===null){
         favourites=[];
       }
       else{
-        favourites=JSON.parse(  localStorage.getItem('favouriteHeros'));
+        favourites=JSON.parse(localStorage.getItem('favouriteHeros'));
       }
       return favourites;
 }

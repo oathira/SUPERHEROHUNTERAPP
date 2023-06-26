@@ -1,5 +1,6 @@
 fetchCharacterData();
 
+// fetch character from API
 async function fetchCharacterData(){
     const string = window.location.search;
     const urlParams = new URLSearchParams(string); 
@@ -13,7 +14,7 @@ async function fetchCharacterData(){
     handleCharDescription(output.data.results);
 }
 
-
+// function to display charcter details 
 function handleCharDescription(data){
     const charName = document.getElementById('name')
     charName.innerHTML = data[0].name; 
